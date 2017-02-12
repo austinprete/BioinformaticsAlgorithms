@@ -1,5 +1,6 @@
 from utilities import read_lines_from_dataset
 
+
 def pattern_count(text, pattern):
     pattern_length = len(pattern)
     count = 0
@@ -9,8 +10,8 @@ def pattern_count(text, pattern):
             count += 1
     return count
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     lines = read_lines_from_dataset('1a')
 
     text = lines[0]
