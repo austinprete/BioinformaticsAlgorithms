@@ -43,4 +43,3 @@ def pattern_to_number(pattern):
 
 if __name__ == '__main__':
     print(pattern_to_number('TATATCAGACCGAGGACTTTAAGACTA'))
-    print(pattern_to_number('TATATCAGACCGAGGACTTTAAGACTA'))
