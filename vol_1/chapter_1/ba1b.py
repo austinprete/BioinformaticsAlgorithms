@@ -26,13 +26,13 @@ def faster_frequent_words(text, k):
 
     max_count = max(frequency_array)
 
-    frequent_patterns = []
+    frequent_patterns = set()
 
     for index in range(len(frequency_array)):
         if frequency_array[index] == max_count:
             pattern = number_to_pattern(index, k)
 
-            frequent_patterns.append(pattern)
+            frequent_patterns.add(pattern)
 
     return frequent_patterns
 
