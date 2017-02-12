@@ -1,3 +1,13 @@
+"""
+Implement NumberToPattern
+
+Convert an integer to its corresponding DNA string.
+
+Given: Integers index and k.
+
+Return: NumberToPattern(index, k).
+"""
+
 import math
 
 NUMBER_TO_LETTER = {0: 'A', 1: 'C', 2: 'G', 3: 'T'}

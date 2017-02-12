@@ -1,3 +1,15 @@
+"""
+Given an integer k, we define the frequency array of a string Text as an array of length 4k, where the i-th element of the array holds the number of times that the i-th k-mer (in the lexicographic order) appears in Text (see Figure 1.
+
+Computing a Frequency Array
+
+Generate the frequency array of a DNA string.
+
+Given: A DNA string Text and an integer k.
+
+Return: The frequency array of k-mers in Text.
+"""
+
 import math
 
 from utilities import read_lines_from_dataset

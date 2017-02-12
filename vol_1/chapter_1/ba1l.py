@@ -1,3 +1,13 @@
+"""
+Implement PatternToNumber
+
+Convert a DNA string to a number.
+
+Given: A DNA string Pattern.
+
+Return: PatternToNumber(Pattern).
+"""
+
 import math
 
 LETTER_TO_NUMBER = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
