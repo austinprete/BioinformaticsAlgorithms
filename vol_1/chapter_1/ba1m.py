@@ -13,7 +13,7 @@ import math
 NUMBER_TO_LETTER = {0: 'A', 1: 'C', 2: 'G', 3: 'T'}
 
 
-def number_to_pattern(number, k):
+def iterative_number_to_pattern(number, k):
     pattern = ''
 
     for index in range(0, k):
@@ -27,6 +27,20 @@ def number_to_pattern(number, k):
         pattern += current_letter
 
     return pattern
+
+
+def number_to_pattern(index, k):
+    if k == 1:
+        return NUMBER_TO_LETTER[index]
+
+    prefix_index = int(index / 4)
+    remainder = index % 4
+
+    letter = NUMBER_TO_LETTER[remainder]
+
+    prefix_pattern = number_to_pattern(prefix_index, k - 1)
+
+    return prefix_pattern + letter
 
 
 if __name__ == '__main__':
