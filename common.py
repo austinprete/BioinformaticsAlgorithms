@@ -8,6 +8,8 @@ from vol_1.chapter_1.ba1k import computing_frequencies
 
 from vol_1.chapter_1.ba1b import faster_frequent_words as frequent_words
 
+from vol_1.chapter_1.ba1c import find_reverse_complement
+
 '''
 This file's purpose is to act as an easy export for commonly used functions
 '''
