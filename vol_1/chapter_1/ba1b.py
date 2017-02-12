@@ -12,7 +12,7 @@ Return: All most frequent k-mers in Text (in any order).
 
 from utilities import read_lines_from_dataset
 
-from common import (computing_frequencies, pattern_count, number_to_pattern)
+from common import (compute_frequencies, pattern_count, number_to_pattern)
 
 
 def frequent_words(text, k):
@@ -34,7 +34,7 @@ def frequent_words(text, k):
 
 
 def faster_frequent_words(text, k):
-    frequency_array = computing_frequencies(text, k)
+    frequency_array = compute_frequencies(text, k)
 
     max_count = max(frequency_array)
 

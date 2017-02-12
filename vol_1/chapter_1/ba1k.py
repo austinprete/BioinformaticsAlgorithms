@@ -17,7 +17,7 @@ from utilities import read_lines_from_dataset
 from common import pattern_to_number
 
 
-def computing_frequencies(text, k):
+def compute_frequencies(text, k):
     frequency_array = []
 
     for index in range(int(math.pow(4, k))):
@@ -38,7 +38,7 @@ if __name__ == '__main__':
     text = lines[0]
     k = int(lines[1])
 
-    result = computing_frequencies(text, k)
+    result = compute_frequencies(text, k)
 
     str_result = map(lambda x: str(x), result)
 
