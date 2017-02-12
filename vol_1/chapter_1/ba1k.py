@@ -2,7 +2,7 @@ import math
 
 from utilities import read_lines_from_dataset
 
-from vol_1.chapter_1.ba1l import pattern_to_number
+from common import pattern_to_number
 
 
 def computing_frequencies(text, k):
