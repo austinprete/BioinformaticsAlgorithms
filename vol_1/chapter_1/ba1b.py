@@ -1,8 +1,6 @@
-from functools import reduce
-
 from utilities import read_lines_from_dataset
 
-from vol_1.chapter_1.ba1a import pattern_count
+from common import (computing_frequencies, pattern_count, number_to_pattern)
 
 
 def frequent_words(text, k):
@@ -23,13 +21,34 @@ def frequent_words(text, k):
     return frequent_patterns
 
 
-if __name__ == '__main__':
+def faster_frequent_words(text, k):
+    frequency_array = computing_frequencies(text, k)
 
+    max_count = max(frequency_array)
+
+    frequent_patterns = []
+
+    for index in range(len(frequency_array)):
+        if frequency_array[index] == max_count:
+            pattern = number_to_pattern(index, k)
+
+            frequent_patterns.append(pattern)
+
+    return frequent_patterns
+
+
+if __name__ == '__main__':
     lines = read_lines_from_dataset('1b')
 
     text = lines[0]
     k = int(lines[1])
 
     result = frequent_words(text, k)
+
+    print(' '.join(result))
+
+    print('\nUsing Faster Frequent Words:\n')
+
+    result = faster_frequent_words(text, k)
 
     print(' '.join(result))
