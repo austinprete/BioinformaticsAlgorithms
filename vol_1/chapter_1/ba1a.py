@@ -8,6 +8,7 @@ def pattern_count(text, pattern):
     for index in range(0, (len(text) - pattern_length) + 1):
         if text[index:index + len(pattern)] == pattern:
             count += 1
+
     return count
 
 
