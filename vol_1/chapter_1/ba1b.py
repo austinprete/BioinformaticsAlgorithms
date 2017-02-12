@@ -13,7 +13,7 @@ def frequent_words(text, k):
         pattern = text[index:index + k]
         count_list.append(pattern_count(text, pattern))
 
-    max_count = reduce(lambda x, y: x if x > y else y, count_list)
+    max_count = max(count_list)
 
     for index in range(0, (len(text) - k) + 1):
 
