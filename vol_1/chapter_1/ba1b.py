@@ -17,7 +17,7 @@ from utilities import read_lines_from_dataset
 from common import (compute_frequencies, pattern_count, number_to_pattern)
 
 
-def frequent_words(text, k):
+def slow_frequent_words(text, k):
     frequent_patterns = set()
     count_list = []
 
@@ -35,7 +35,7 @@ def frequent_words(text, k):
     return frequent_patterns
 
 
-def faster_frequent_words(text, k):
+def frequent_words(text, k):
     frequency_array = compute_frequencies(text, k)
 
     max_count = max(frequency_array)
@@ -57,12 +57,12 @@ if __name__ == '__main__':
     text = lines[0]
     k = int(lines[1])
 
-    result = frequent_words(text, k)
+    result = slow_frequent_words(text, k)
 
     print(' '.join(result))
 
     print('\nUsing Faster Frequent Words:\n')
 
-    result = faster_frequent_words(text, k)
+    result = frequent_words(text, k)
 
     print(' '.join(result))
