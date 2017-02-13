@@ -1,5 +1,7 @@
 """
-In this problem, we ask a simple question: how many times can one string occur as a substring of another? Recall from “Find the Most Frequent Words in a String” that different occurrences of a substring can overlap with each other. For example, ATAATA occurs three times in CGATATATCCATAGCGATATATCCATAG.
+In this problem, we ask a simple question: how many times can one string occur as a substring of another? Recall from
+“Find the Most Frequent Words in a String” that different occurrences of a substring can overlap with each other. For
+example, ATAATA occurs three times in CGATATATCCATAGCGATATATCCATAG.
 
 Pattern Matching Problem
 
