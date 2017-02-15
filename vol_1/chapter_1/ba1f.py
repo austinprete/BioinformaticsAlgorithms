@@ -14,8 +14,6 @@ Return: All integer(s) i minimizing Skew(Prefixi (Text)) over all values of i (f
 
 from utilities import read_lines_from_dataset
 
-from common import compute_frequencies, number_to_pattern, pattern_to_number
-
 
 def find_minimum_skew(genome: str):
     skew_list = [0]
