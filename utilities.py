@@ -1,4 +1,7 @@
-def read_lines_from_dataset(problem_number):
+from typing import List
+
+
+def read_lines_from_dataset(problem_number: str) -> List[str]:
     f = open("resources/rosalind_ba%s.txt" % problem_number)
     lines = f.readlines()
 
