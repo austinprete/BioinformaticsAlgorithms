@@ -10,7 +10,7 @@ Given: Strings Pattern and Text along with an integer d.
 Return: All starting positions where Pattern appears as a substring of Text with at most d mismatches.
 """
 
-from chapter_1 import calculate_hamming_distance
+from common import calculate_hamming_distance
 from utilities import convert_result_list_to_string, read_lines_from_dataset
 
 
