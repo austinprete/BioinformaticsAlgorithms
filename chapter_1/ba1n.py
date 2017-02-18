@@ -10,9 +10,8 @@ Given: A DNA string Pattern and an integer d.
 Return: The collection of strings Neighbors(Pattern, d).
 """
 
+from chapter_1 import calculate_hamming_distance
 from utilities import convert_result_list_to_string, read_lines_from_dataset
-
-from vol_1.chapter_1.ba1g import calculate_hamming_distance
 
 NUCLEOTIDES = ['A', 'C', 'G', 'T']
 

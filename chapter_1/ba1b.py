@@ -16,7 +16,6 @@ from utilities import read_lines_from_dataset
 
 from common import (compute_frequencies, pattern_count, number_to_pattern)
 
-
 def slow_frequent_words(text, k):
     frequent_patterns = set()
     count_list = []
