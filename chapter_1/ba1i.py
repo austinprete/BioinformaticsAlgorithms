@@ -20,8 +20,9 @@ Given: A string Text as well as integers k and d.
 
 Return: All most frequent k-mers with up to d mismatches in Text.
 """
+import sys
 
-from chapter_1 import calculate_hamming_distance
+from common import calculate_hamming_distance, find_neighbors
 from utilities import read_lines_from_dataset
 
 
@@ -38,13 +39,44 @@ def approximate_pattern_count(pattern: str, text: str, allowed_mismatches: int) 
     return count
 
 
+def find_frequent_words_with_mismatches(text, k, d):
+    pattern_set = set()
+
+    for index in range(len(text) - k + 1):
+        substring = text[index:index + k]
+
+        if substring in pattern_set:
+            continue
+        else:
+            neighbors = find_neighbors(substring, d)
+            for neighbor in neighbors:
+                pattern_set.add(neighbor)
+
+    frequent_words = set()
+    highest_count = 0
+
+    for pattern in pattern_set:
+        pattern_count = approximate_pattern_count(pattern, text, d)
+
+        if pattern_count > highest_count:
+            frequent_words.clear()
+            frequent_words.add(pattern)
+            highest_count = pattern_count
+        elif pattern_count == highest_count:
+            frequent_words.add(pattern)
+
+    return frequent_words
+
+
 if __name__ == '__main__':
-    lines = read_lines_from_dataset('1h')
+    lines = read_lines_from_dataset('1i')
 
-    pattern = lines[0]
-    text = lines[1]
-    allowed_mismatches = int(lines[2])
+    text = lines[0]
+    integer_inputs = list(map(lambda x: int(x), lines[1].split(' ')))
+    k = integer_inputs[0]
+    d = integer_inputs[1]
 
-    result = approximate_pattern_count(pattern, text, allowed_mismatches)
+    result = find_frequent_words_with_mismatches(text, k, d)
 
-    print(result)
+    for word in result:
+        print("%s " % word, end='')

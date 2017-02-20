@@ -12,6 +12,8 @@ from chapter_1.ba1c import find_reverse_complement
 
 from chapter_1.ba1g import calculate_hamming_distance
 
+from chapter_1.ba1n import find_neighbors
+
 '''
 This file's purpose is to act as an easy export for commonly used functions
 '''
